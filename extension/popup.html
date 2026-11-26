@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Visor Móvil</title>
+<link rel="stylesheet" href="vendor/primer-colors.css">
+<link rel="stylesheet" href="popup.css">
+<script type="module" src="popup.js"></script>
+</head>
+<body>
+<header><img src="icons/32.png" width="20" height="20" alt=""><strong>Visor Móvil</strong></header>
+<p id="source" title="">Leyendo pestaña…</p>
+<form id="setup">
+  <div id="counts" role="group" aria-label="Cantidad de vistas">
+    <button type="button" data-count="1" aria-pressed="false">1 vista</button>
+    <button type="button" data-count="2" aria-pressed="false">2 vistas</button>
+    <button type="button" data-count="3" aria-pressed="true">3 vistas</button>
+    <button type="button" data-count="4" aria-pressed="false">4 vistas</button>
+  </div>
+  <div id="devices" aria-label="Modelos por vista">
+    <label>Vista 1<select aria-label="Modelo de la vista 1"></select></label>
+    <label>Vista 2<select aria-label="Modelo de la vista 2"></select></label>
+    <label>Vista 3<select aria-label="Modelo de la vista 3"></select></label>
+    <label hidden>Vista 4<select aria-label="Modelo de la vista 4"></select></label>
+  </div>
+  <label id="fullscreen-option" hidden><input type="checkbox" id="fullscreen"> Pantalla completa (sin marco)</label>
+  <button id="windows" type="submit" disabled>Abrir en ventanas</button>
+</form>
+<p id="status" role="status" hidden></p>
+</body>
+</html>

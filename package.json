@@ -1,0 +1,14 @@
+{
+  "name": "visor-movil",
+  "version": "0.9.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/core.test.mjs",
+    "test:browser": "node --test tests/browser.test.mjs",
+    "build:firefox": "node scripts/build-firefox.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.1"
+  }
+}

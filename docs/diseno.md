@@ -1,0 +1,9 @@
+# Diseño de Visor Móvil
+
+Solo se mantiene el mini menú del icono. La primera elección es cuántas ventanas abrir; debajo se muestra un selector por vista, y hay una única acción principal. Colores, controles y enfoque discreto siguen [Primer](https://github.com/primer) sin frameworks ni dependencias de ejecución. Se incluye solo el subconjunto de tokens claros y oscuros en uso, de [@primer/primitives 11.10.0](https://www.npmjs.com/package/@primer/primitives/v/11.10.0) (MIT; fuente: `dist/css/functional/themes/{light,dark}.css`).
+
+Los modelos usan dimensiones lógicas del [catálogo de Playwright](https://playwright.dev/docs/emulation#devices). Los perfiles genéricos usan tamaños frecuentes en [móviles](https://gs.statcounter.com/screen-resolution-stats/mobile/chile) y [tablets de Chile](https://gs.statcounter.com/screen-resolution-stats/tablet/chile) según Statcounter, no modelos inferidos. Los perfiles dimensionan ventanas nativas, no reproducen el navegador ni el hardware de cada equipo.
+
+`activeTab` es el único permiso. La apertura se realiza en el proceso de fondo del complemento para que siga después de que la primera ventana tome el foco y el mini menú se cierre. Chromium usa un service worker y Firefox una página de eventos MV3. Las URL permanecen en el navegador; se guarda localmente solo el número de vistas y los perfiles. No se usan iframes, tableros, depuración ni pestañas de apoyo.
+
+La [API de ventanas de Chrome/Brave](https://developer.chrome.com/docs/extensions/reference/api/windows) ofrece popups nativos; no tiene opción sin marco para ventanas redimensionadas. El estado fullscreen sí consume toda la pantalla y no se combina con dimensiones. Se mantiene como opción explícita de una vista. La distribución de cuatro vistas es un cálculo local de fila o mosaico.

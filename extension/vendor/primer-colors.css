@@ -1,0 +1,3 @@
+/* Selected, unchanged values from @primer/primitives 11.10.0 (MIT). */
+:root{--bgColor-default:#ffffff;--fgColor-default:#1f2328;--fgColor-muted:#59636e;--fgColor-accent:#0969da;--borderColor-default:#d1d9e0;--control-bgColor-rest:#f6f8fa;--control-bgColor-hover:#eff2f5;--control-bgColor-active:#e6eaef;--borderColor-accent-emphasis:#0969da;}
+@media (prefers-color-scheme: dark){  :root{--bgColor-default:#0d1117;--fgColor-default:#f0f6fc;--fgColor-muted:#9198a1;--fgColor-accent:#4493f8;--borderColor-default:#3d444d;--control-bgColor-rest:#212830;--control-bgColor-hover:#262c36;--control-bgColor-active:#2a313c;--borderColor-accent-emphasis:#1f6feb;}}
